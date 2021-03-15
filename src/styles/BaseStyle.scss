@@ -1,6 +1,5 @@
-.button-link {
+.button {
   display: block;
-  background: var(--blue);
   width: 200px;
   margin: 32px 0;
   padding: 12px 32px;
@@ -9,4 +8,36 @@
 a {
   text-align: center;
   text-decoration: none;
+}
+.btn-blue {
+  background: var(--blue);
+}
+.btn-green {
+  background: var(--green);
+}
+.btn-red {
+  background: var(--red);
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--green);
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  color: var(--shapes);
+  font: inherit;
 }

@@ -56,7 +56,7 @@ export function CustomerList() {
           return <CustomerItem customer={customer} />;
         })}
       </div>
-      <a href="/register" className="button-link">
+      <a href="/register" className="button btn-green">
         New Customer
       </a>
     </section>
