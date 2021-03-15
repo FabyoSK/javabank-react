@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { CustomerItem } from "./CustomerItem";
-import api  from "../services/api"
+import api from "../services/api";
 
 import "../styles/CustomerList.scss";
 import "../styles/CustomerTable.scss";
@@ -19,45 +19,38 @@ export function CustomerList() {
   const [customers, setCustomers] = useState<Customer[]>([]);
 
   useEffect(() => {
-   fetch("http://localhost:8080/javabank4/api/customer").then(response => response.json()).then(data => setCustomers(data))
-  }, [])
+    fetch("http://localhost:8080/javabank4/api/customer")
+      .then((response) => response.json())
+      .then((data) => setCustomers(data));
+  }, []);
 
   return (
-    <section className="task-list container">
+    <section className="customer-list container">
       <header>
         <h2>Customer List</h2>
       </header>
 
       <div className="table">
-        <div class="table-header">
-          <div class="header__item">
-            <a id="name" class="filter__link" href="#">
-              Name
-            </a>
+        <div className="table-header">
+          <div className="header__item">
+            <a>Id</a>
           </div>
-          <div class="header__item">
-            <a id="wins" class="filter__link filter__link--number" href="#">
-              Wins
-            </a>
+          <div className="header__item">
+            <a>First Name</a>
           </div>
-          <div class="header__item">
-            <a id="draws" class="filter__link filter__link--number" href="#">
-              Draws
-            </a>
+          <div className="header__item">
+            <a>Last Name</a>
           </div>
-          <div class="header__item">
-            <a id="losses" class="filter__link filter__link--number" href="#">
-              Losses
-            </a>
+          <div className="header__item">
+            <a>Email</a>
           </div>
-          <div class="header__item">
-            <a id="total" class="filter__link filter__link--number" href="#">
-              Total
-            </a>
+          <div className="header__item">
+            <a>Phone</a>
           </div>
         </div>
-        {customers.map(customer => return())}
-        })
+        {customers.map((customer) => {
+          return <CustomerItem customer={customer} />;
+        })}
       </div>
     </section>
   );
