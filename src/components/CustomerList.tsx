@@ -4,7 +4,6 @@ import api from "../services/api";
 
 import "../styles/CustomerList.scss";
 import "../styles/CustomerTable.scss";
-import { FiTrash, FiCheckSquare } from "react-icons/fi";
 import { transform } from "@babel/core";
 
 interface Customer {
