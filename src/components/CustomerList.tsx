@@ -4,7 +4,7 @@ import api from "../services/api";
 
 import "../styles/CustomerList.scss";
 import "../styles/CustomerTable.scss";
-import { transform } from "@babel/core";
+import "../styles/BaseStyle.scss";
 
 interface Customer {
   id: number;
@@ -24,7 +24,7 @@ export function CustomerList() {
   }, []);
 
   return (
-    <section className="customer-list container">
+    <section className="box container">
       <header>
         <h2>Customer List</h2>
       </header>
@@ -51,6 +51,9 @@ export function CustomerList() {
           return <CustomerItem customer={customer} />;
         })}
       </div>
+      <a href="/register" className="button-link">
+        New Customer
+      </a>
     </section>
   );
 }
