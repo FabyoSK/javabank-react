@@ -17,11 +17,16 @@ interface Customer {
 export function CustomerList() {
   const [customers, setCustomers] = useState<Customer[]>([]);
 
+  // useEffect(() => {
+  // fetch("http://localhost:8080/javabank4/api/customer")
+  // .then((response) => response.json())
+  // .then((data) => setCustomers(data));
+  // }, []);
   useEffect(() => {
-    fetch("http://localhost:8080/javabank4/api/customer")
-      .then((response) => response.json())
-      .then((data) => setCustomers(data));
-  }, []);
+    api.get("customer").then((response) => {
+      setCustomers(response.data);
+    });
+  });
 
   return (
     <section className="box container">
