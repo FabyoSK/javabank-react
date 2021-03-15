@@ -8,12 +8,14 @@
     "build": "cross-env NODE_ENV=production webpack"
   },
   "dependencies": {
+    "@types/react-router-dom": "^5.1.7",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.1",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",

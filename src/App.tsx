@@ -1,13 +1,7 @@
-import { CustomerList } from './components/CustomerList'
-import { Header } from "./components/Header";
-import './styles/global.scss'
-
+import { CustomerList } from "./components/CustomerList";
+import Routes from "./Routes";
+import "./styles/global.scss";
 
 export function App() {
-  return (
-    <>
-      <Header />
-      <CustomerList />
-    </>
-  )
+  return <Routes />;
 }
