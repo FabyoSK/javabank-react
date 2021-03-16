@@ -16,6 +16,11 @@ export function CustomerItem(props: CustomerItemProps) {
         <div className="table-data">{props.customer.lastName}</div>
         <div className="table-data">{props.customer.email}</div>
         <div className="table-data">{props.customer.phone}</div>
+        <div className="table-data">{props.customer.phone}</div>
+        <div className="table-data">{props.customer.phone}</div>
+        <div className="table-data">
+          <button className="">Delete</button>
+        </div>
       </div>
     </div>
   );

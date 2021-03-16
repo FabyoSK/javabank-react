@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { CustomerItem } from "./CustomerItem";
+
 import api from "../services/api";
 
 import "../styles/CustomerList.scss";
@@ -27,7 +28,9 @@ export function CustomerList() {
       setCustomers(response.data);
     });
   });
-
+  function handleDeleteCustomer(){
+    api.delete(`customer/1`)
+  }
   return (
     <section className="box container">
       <header>
@@ -51,6 +54,15 @@ export function CustomerList() {
           <div className="header__item">
             <a>Phone</a>
           </div>
+          <div className="header__item">
+            <a>Show</a>
+          </div>
+          <div className="header__item">
+            <a>Edit</a>
+          </div>
+          <div className="header__item">
+            <a>Delete</a>
+          </div>
         </div>
         {customers.map((customer) => {
           return <CustomerItem customer={customer} />;
@@ -59,6 +71,7 @@ export function CustomerList() {
       <a href="/register" className="button btn-green">
         New Customer
       </a>
+      <button onClick={handleDeleteCustomer}>GG</button>
     </section>
   );
 }

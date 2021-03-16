@@ -9,13 +9,15 @@ export function RegisterForm() {
 
   function handleCustomerSubmit() {
     console.log(firstName, lastName, email, phone);
-    api.post("customer", {
-      firstName,
-      lastName,
-      email,
-      phone,
-    });
+    const customer = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      phone: phone,
+    };
+    api.post("customer", customer);
   }
+
 
   return (
     <section className="container box">
